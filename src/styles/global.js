@@ -268,7 +268,7 @@ textarea {
 }
 
 body {
-    background: #16202c;
+    background: #78838E;
     line-height: 1;
     font-size: 100%;
     font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;

@@ -15,17 +15,17 @@ const ListItem = styled.li`
     padding: .5rem 0;
 
     .active {
-        color: #00adb5;
+        color: #ff7315;
     }
 `
 
 const Anchor = styled(Link)`
-    color: #8899a6;
+    color: #78838E;
     text-decoration: none;
     transition: ease .3s;
 
     &:hover {
-        color: #00adb5;
+        color: #ff7315;
     }
 `
 

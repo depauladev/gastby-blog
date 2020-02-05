@@ -38,8 +38,10 @@ const MenuBarItem = styled.span`
   padding: 1.1rem;
   position: relative;
   width: 3.75rem;
+  transition: ease .3s;
+
   &:hover {
-    color: #00adb5;
+    color: #ff7315;
   }
 `
 

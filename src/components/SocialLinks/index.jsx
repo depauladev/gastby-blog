@@ -24,7 +24,7 @@ const SocialLinksLink = styled.a`
     transition: color .3s;
 
     &:hover {
-        color: #00adb5;
+        color: #ff7315;
     }
 `
 
