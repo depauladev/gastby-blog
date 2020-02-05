@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import GlobalStyles from '../styles/global'
 
 import Sidebar from './Sidebar'
+import Menubar from './Menubar'
 
 const LayoutWrapper = styled.section`
   display: flex;
@@ -22,6 +23,7 @@ const Layout = ({ children }) => {
       <GlobalStyles />
       <Sidebar />
       <LayoutMain>{children}</LayoutMain>
+      <Menubar />
     </LayoutWrapper>
   )
 }
