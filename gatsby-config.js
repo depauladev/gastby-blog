@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: `DePaula Blog`,
-    description: `I made cool things on internet:)`,
+    description: `I made cool things on internet :)`,
     author: `@depauladev`,
-    position: "Fullstack developer"
+    position: "Fullstack developer",
+    name: "Luiz de Paula"
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
