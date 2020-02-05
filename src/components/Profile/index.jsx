@@ -6,18 +6,18 @@ import styled from 'styled-components'
 import Avatar from '../Avatar'
 
 const ProfileWrapper = styled.section`
-    color: #8899a6;
+    color: #00adb5;
     display: flex;
     flex-direction: column;
 `
 
 const ProfileLink = styled(Link)`
-    color: #8899a6;
+    color: #00adb5;
     text-decoration: none;
     transition: color 0.5s;
 
     &:hover {
-        color: #1fa1f2;
+        color: #eeeeee;
     }
 `
 

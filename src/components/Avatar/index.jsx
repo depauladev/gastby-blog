@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 const AvatarStyled = styled(Img)`
-    border-radius: 50%;
+    border-radius:65% 35% 69% 31% / 39% 61% 39% 61% ;
     height: 3.75rem;
     margin: auto;
     width: 3.75rem;

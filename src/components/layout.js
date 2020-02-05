@@ -10,7 +10,7 @@ const LayoutWrapper = styled.section`
 `
 
 const LayoutMain = styled.main`
-  background-color: #16202c;
+  background-color: #393e46;
   min-height: 100vh;
   padding: 0 3.75rem 0 20rem;
   width: 100%;

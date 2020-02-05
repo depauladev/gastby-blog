@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Profile from '../Profile'
+import SocialLinks from '../SocialLinks'
 
 const SidebarWrapper = styled.aside`
     display: flex;
@@ -12,13 +13,14 @@ const SidebarWrapper = styled.aside`
     width: 20rem;
     padding: 2rem;
     text-align: center;
-    border-right: 1px solid #38444d;
-    background-color: #192734;
+    border-right: 1px solid #ff7315;
+    background: #222831;
 `
 
 const Sidebar = () => (
     <SidebarWrapper>
-        <Profile/>
+        <Profile />
+        <SocialLinks />
     </SidebarWrapper>
 )
 
