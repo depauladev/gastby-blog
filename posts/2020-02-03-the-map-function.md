@@ -1,5 +1,5 @@
 ---
-date: 2020-02-06 09:45:00
+date: 2020-02-03 09:45:00
 title: A função Map do Javascript
 description: Como funciona o loop Map e porque é tão usado
 category: JS
