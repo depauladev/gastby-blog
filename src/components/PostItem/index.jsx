@@ -25,9 +25,9 @@ const Wrapper = styled.section`
 
 const Tag = styled.div`
   align-items: center;
-  background: ${props => props.background ?? '#000'};
+  background: ${props => props.background ?? '#ff7315'};
   border-radius: 50%;
-  color: #fff;
+  color: #000;
   display: flex;
   font-size: 1.3rem;
   font-weight: 700;
