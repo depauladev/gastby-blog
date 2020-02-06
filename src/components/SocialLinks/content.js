@@ -1,7 +1,15 @@
 const links = [
     {
+        label: 'Linkedin',
+        url: 'https://www.linkedin.com/in/luizhpo'
+    },
+    {
         label: 'Github',
         url: 'https://github.com/luizhpo'
+    },
+    {
+        label: 'Codepen',
+        url: 'https://codepen.io/LuizHPO'
     },
     {
         label: 'Twitter',
@@ -10,10 +18,6 @@ const links = [
     {
         label: 'Instagram',
         url: 'https://www.instagram.com/maoneze'
-    },
-    {
-        label: 'Linkedin',
-        url: 'https://www.linkedin.com/in/luizhpo'
     },
 ]
 
