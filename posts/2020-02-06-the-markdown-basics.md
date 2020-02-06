@@ -18,7 +18,9 @@ Todavia, o acompanhamento das [preferências](https://google.com.br) de consumo 
 
 ```javascript
 const a = 'teste'
-console.log({ a })
+a.map(post => {
+    return (<div>Top!</div>)
+})
 ```
 
 > Nunca é demais lembrar o peso e o significado destes problemas, uma vez que o novo modelo estrutural aqui preconizado afeta positivamente a correta previsão dos procedimentos normalmente adotados.
@@ -26,5 +28,7 @@ console.log({ a })
 
 ```jsx
 const a = 'teste'
-console.log({ a })
+a.map(post => {
+    return (<div>Top!</div>)
+})
 ```
