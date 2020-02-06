@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from 'prop-types'
 import styled from "styled-components"
 import { Link } from "gatsby"
 
@@ -24,7 +25,7 @@ const Wrapper = styled.section`
 
 const Tag = styled.div`
   align-items: center;
-  background: ${props => props.background};
+  background: ${props => props.background ?? '#000'};
   border-radius: 50%;
   color: #fff;
   display: flex;
@@ -62,22 +63,31 @@ const Description = styled.p`
   color: #E1EEF4;
 `
 
-const PostItem = () => (
-    <Anchor to="/slug/">
+const PostItem = ({slug, category, date, timeToRead, title, description, background }) => (
+    <Anchor to={ slug }>
       <Wrapper>
-        <Tag background="#000">Misc</Tag>
+        <Tag background={background}>{ category }</Tag>
         <Info>
-          <Datespan>05 de Fevereiro de 2020 • 4 min de leitura</Datespan>
+          <Datespan>{ date } • { timeToRead } min de leitura</Datespan>
           <Title>
-            Diga não ao Medium: tenha sua própria plataforma
+            { title }
           </Title>
           <Description>
-            Algumas razões para você ter sua própria plataforma ao invés de
-            soluções como o Medium.
+            { description }
           </Description>
         </Info>
       </Wrapper>
     </Anchor>
 )
+
+PostItem.propTypes = {
+  slug: PropTypes.string.isRequired,
+  background: PropTypes.string,
+  category: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  timeToRead: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+}
 
  export default PostItem
