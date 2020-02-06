@@ -10,7 +10,6 @@ const Anchor = styled(Link)`
   transition: ease .3s;
   
   &:hover {
-    color: #1fa1f2;
     background-color: #0002;
   }
 `
