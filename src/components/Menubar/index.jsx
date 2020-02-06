@@ -19,6 +19,7 @@ const MenuBarWrapper = styled.aside`
   position: fixed;
   right: 0;
   width: 3.75rem;
+  border-left: 1px solid #ff7315;
 `
 
 const MenuBarGroup = styled.div`
