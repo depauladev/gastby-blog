@@ -1,10 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 import SEO from "../components/seo"
 import RecommendedPosts from "../components/RecommendedPosts"
 
+// Onde fica o css dos posts
 import * as S from '../components/Post/styled'
 
 const BlogPost = ({ data, pageContext }) => {
