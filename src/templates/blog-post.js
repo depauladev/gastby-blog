@@ -5,23 +5,24 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import RecommendedPosts from "../components/RecommendedPosts"
 
-// Onde fica o css dos posts
+// Onde ficam os estilos dos posts
 import * as S from '../components/Post/styled'
 
 const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
+  const { title, date, description } = post.frontmatter
   const next = pageContext.nextPost
   const previous = pageContext.previousPost
 
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} />
+      <SEO title={title} />
       <S.PostHeader>
         <S.PostDate>
-          {post.frontmatter.date} • {post.timeToRead} min de leitura
+          {date} • {post.timeToRead} min de leitura
         </S.PostDate>
-        <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
-        <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
+        <S.PostTitle>{title}</S.PostTitle>
+        <S.PostDescription>{description}</S.PostDescription>
       </S.PostHeader>
       <S.MainContent>
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
