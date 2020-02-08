@@ -14,7 +14,7 @@ const PaginationWrapper = styled.section`
 
     ${media.lessThan("large")`
         font-size: .8rem;
-        padding: 1.4rem 1rem;
+        padding: 1rem;
     `}
 
     a {

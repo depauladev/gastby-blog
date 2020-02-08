@@ -5,7 +5,9 @@ import media from "styled-media-query"
 
 import links from './content'
 
-const Wrapper = styled.nav``
+const Wrapper = styled.nav`
+    display: block;  /* Retirar para aparecer links de navegação de paginas */
+`
 
 const List = styled.ul`
     font-size: 1.2rem;
