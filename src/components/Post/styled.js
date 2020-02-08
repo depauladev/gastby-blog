@@ -17,7 +17,7 @@ export const PostTitle = styled.h1`
   font-size: 4rem;
   font-weight: 700;
   padding: 0 1.4rem;
-  margin: 1rem auto;
+  margin: 1rem auto .3rem auto;
 
   ${media.lessThan("large")`
     font-size: 2.8rem;
@@ -43,6 +43,16 @@ export const PostDate = styled.p`
   font-weight: 100;
   padding: 0 1.4rem;
 
+  ${media.lessThan("large")`
+    padding: 0 1rem;
+  `}
+`
+
+export const PostAuthor = styled.p`
+  margin-bottom: 25px;
+  padding: 0 1.5rem;
+  font-size: .9rem;
+  
   ${media.lessThan("large")`
     padding: 0 1rem;
   `}

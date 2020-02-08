@@ -10,7 +10,7 @@ import * as S from '../components/Post/styled'
 
 const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
-  const { title, date, description } = post.frontmatter
+  const { title, date, description, author } = post.frontmatter
   const next = pageContext.nextPost
   const previous = pageContext.previousPost
 
@@ -19,9 +19,10 @@ const BlogPost = ({ data, pageContext }) => {
       <SEO title={title} />
       <S.PostHeader>
         <S.PostDate>
-          {date} • {post.timeToRead} min de leitura
+          {date}
         </S.PostDate>
         <S.PostTitle>{title}</S.PostTitle>
+        <S.PostAuthor>Por: { author }</S.PostAuthor>
         <S.PostDescription>{description}</S.PostDescription>
       </S.PostHeader>
       <S.MainContent>
@@ -42,6 +43,7 @@ export const query = graphql`
         title
         description
         date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+        author
       }
       html
       timeToRead
