@@ -15,6 +15,7 @@ const Anchor = styled(Link)`
 `
 
 const Wrapper = styled.section`
+  background: #16202c;
   align-items: center;
   border-bottom: 1px solid #ff7315;
   display: flex;
