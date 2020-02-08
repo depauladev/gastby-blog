@@ -23,7 +23,7 @@ const BlogList = props => {
           const { background, category, date, description, title } = frontmatter
   
           return (
-            <PostItem
+            <PostItem key={fields.slug}
               slug={fields.slug}
               background={background}
               category={category}

@@ -5,18 +5,18 @@ import styled from 'styled-components'
 
 const PaginationWrapper = styled.section`
     align-items: center;
-    border-top: 1px solid #38444d;
-    color: #eee;
+    border-top: 1px solid var(--borders);
+    color: var(--texts);
     display: flex;
     padding: 1.5rem 3rem;
     justify-content: space-between;
     a {
-    color: #EEE;
+        color: var(--texts);
     text-decoration: none;
     transition: color 0.5s;
 
         &:hover {
-            color: #ff7315;
+            color: var(--highlight);
         }
     }
 `

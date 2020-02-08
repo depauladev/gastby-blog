@@ -4,26 +4,26 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 const Wrapper = styled.section`
-  border-bottom: 1px solid #ff7315;
-  border-top: 1px solid #ff7315;
-  background: #222831;
+  border-bottom: 1px solid var(--borders);
+  border-top: 1px solid var(--borders);
+  background: var(--mediumBackground);
   display: flex;
 `
 
 const Anchor = styled(Link)`
   align-items: center;
-  background: #222831;
-  color: #EEE;
+  background: var(--mediumBackground);
+  color: var(--highlight);
   display: flex;
   padding: 3rem;
   text-decoration: none;
   transition: background 0.5s;
   width: 50%;
   &:hover {
-    background: #38444d;
+    background: var(--borders);
   }
   &.previous {
-    border-right: 1px solid #ff7315;
+    border-right: 1px solid var(--borders);
   }
   &.next {
     justify-content: flex-end;

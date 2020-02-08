@@ -20,12 +20,12 @@ const ListItem = styled.li`
 `
 
 const Anchor = styled(Link)`
-    color: #78838E;
+    color: var(--texts);
     text-decoration: none;
     transition: ease .3s;
 
     &:hover {
-        color: #ff7315;
+        color: var(--highlight);
     }
 `
 

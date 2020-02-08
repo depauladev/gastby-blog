@@ -1,16 +1,15 @@
 import styled from "styled-components"
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 
 import { Home } from "styled-icons/boxicons-solid/Home"
 import { SearchAlt2 as Search } from "styled-icons/boxicons-regular/SearchAlt2"
 import { UpArrowAlt as Arrow } from "styled-icons/boxicons-regular/UpArrowAlt"
 import { Bulb as Light } from "styled-icons/boxicons-regular/Bulb"
-import { Grid } from "styled-icons/boxicons-solid/Grid"
 
 const MenuBarWrapper = styled.aside`
   align-items: center;
-  background: #222831;
+  background: var(--mediumBackground);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -19,7 +18,7 @@ const MenuBarWrapper = styled.aside`
   position: fixed;
   right: 0;
   width: 3.75rem;
-  border-left: 1px solid #ff7315;
+  border-left: 1px solid var(--borders);
 `
 
 const MenuBarGroup = styled.div`
@@ -32,7 +31,7 @@ const MenuBarLink = styled(Link)`
 `
 
 const MenuBarItem = styled.span`
-  color: #EEE;
+  color: var(--texts);
   cursor: pointer;
   display: block;
   height: 3.75rem;
@@ -42,39 +41,56 @@ const MenuBarItem = styled.span`
   transition: ease .3s;
 
   &:hover {
-    color: #ff7315;
+    color: var(--highlight);
+  }
+
+  &.light {
+    color: var(--highlight);
   }
 `
 
-const Menubar = () => (
-    <MenuBarWrapper>
-      <MenuBarGroup>
 
-        <MenuBarLink to="/" title="Voltar para Home">
-          <MenuBarItem>
-            <Home />
+const Menubar = () =>  {
+  const [theme, setTheme] = useState(null)
+
+  const isDarkMode = theme === "dark"
+
+  useEffect(() => {
+    setTheme(window.__theme)
+    window.__onThemeChange = () => setTheme(window.__theme)
+  }, [])
+
+  return (
+      <MenuBarWrapper>
+        <MenuBarGroup>
+  
+          <MenuBarLink to="/" title="Voltar para Home">
+            <MenuBarItem>
+              <Home />
+            </MenuBarItem>
+          </MenuBarLink>
+  
+          <MenuBarLink to="/search/" title="Pesquisar">
+            <MenuBarItem>
+              <Search />
+            </MenuBarItem>
+          </MenuBarLink>
+        </MenuBarGroup>
+  
+        <MenuBarGroup>
+          <MenuBarItem title="Mudar o tema" onClick={() => {
+              window.__setPreferredTheme(isDarkMode ? "light" : "dark")
+            }}
+            className={theme}
+          >
+            <Light />
           </MenuBarItem>
-        </MenuBarLink>
-
-        <MenuBarLink to="/search/" title="Pesquisar">
-          <MenuBarItem>
-            <Search />
+          <MenuBarItem title="Ir para o Topo">
+            <Arrow />
           </MenuBarItem>
-        </MenuBarLink>
-      </MenuBarGroup>
-
-      <MenuBarGroup>
-        <MenuBarItem title="Mudar o tema">
-          <Light />
-        </MenuBarItem>
-        <MenuBarItem title="Mudar visualização">
-          <Grid />
-        </MenuBarItem>
-        <MenuBarItem title="Ir para o Topo">
-          <Arrow />
-        </MenuBarItem>
-      </MenuBarGroup>
-    </MenuBarWrapper>
-)
+        </MenuBarGroup>
+      </MenuBarWrapper>
+  )
+}
 
 export default Menubar

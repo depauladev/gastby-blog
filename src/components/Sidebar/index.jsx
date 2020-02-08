@@ -14,8 +14,8 @@ const SidebarWrapper = styled.aside`
     width: 20rem;
     padding: 2rem;
     text-align: center;
-    border-right: 1px solid #ff7315;
-    background: #222831;
+    border-right: 1px solid var(--borders);
+    background: var(--mediumBackground);
 `
 
 const Sidebar = () => (

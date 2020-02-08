@@ -5,19 +5,19 @@ import styled from 'styled-components'
 
 import Avatar from '../Avatar'
 
-const ProfileWrapper = styled.section`
-    color: #EEE;
+const Wrapper = styled.section`
+    color: var(--texts);
     display: flex;
     flex-direction: column;
 `
 
 const ProfileLink = styled(Link)`
-    color: #ff7315;
+    color: var(--texts);
     text-decoration: none;
     transition: color 0.5s;
 
     &:hover {
-        color: #eeeeee;
+        color: var(--highlight);
     }
 `
 
@@ -54,8 +54,8 @@ const Profile = () => {
     const { name, position, description } = query.site.siteMetadata
 
     return (
-        <ProfileWrapper className="Profile-wrapper">
-            <ProfileLink>
+        <Wrapper className="Profile-wrapper">
+            <ProfileLink to="/">
                 <Avatar />
                 <ProfileName>
                     {name}
@@ -63,7 +63,7 @@ const Profile = () => {
                 </ProfileName>
             </ProfileLink>
             <ProfileDescription>{description}</ProfileDescription>
-        </ProfileWrapper>
+        </Wrapper>
     )
 }
 
