@@ -78,6 +78,12 @@ const MenuBarItem = styled.span`
   `}
 `
 
+const scrollTop = () => {
+  window.scroll({
+    top: 0, 
+    behavior: 'smooth'
+  })
+}
 
 const Menubar = () =>  {
   const [theme, setTheme] = useState(null)
@@ -114,7 +120,7 @@ const Menubar = () =>  {
           >
             <Light />
           </MenuBarItem>
-          <MenuBarItem title="Ir para o Topo">
+          <MenuBarItem title="Ir para o Topo" onClick={scrollTop}>
             <Arrow />
           </MenuBarItem>
         </MenuBarGroup>
