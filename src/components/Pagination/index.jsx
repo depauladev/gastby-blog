@@ -6,7 +6,7 @@ import media from "styled-media-query"
 
 const PaginationWrapper = styled.section`
     align-items: center;
-    border-top: 1px solid var(--borders);
+    /* border-top: 1px solid var(--borders); */
     color: var(--texts);
     display: flex;
     padding: 1.5rem 3rem;

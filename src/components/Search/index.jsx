@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components"
 import media from "styled-media-query"
 import algoliasearch from "algoliasearch/lite"
-import { InstantSearch, SearchBox, Hits, Stats } from "react-instantsearch-dom"
+import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom"
 
 import Hit from "./hit"
 
@@ -13,7 +13,6 @@ const algolia = {
 }
 
 const searchClient = algoliasearch(algolia.appId, algolia.searchOnlyApiKey)
-
 
 export const Wrapper = styled.section`
   background: var(--background);
@@ -56,11 +55,17 @@ export const Wrapper = styled.section`
     border-bottom: 1px solid var(--borders);
     color: var(--texts);
     display: flex;
-    font-size: 1.6rem;
+    font-size: 1.375rem;
     padding: 0.5rem;
     width: 100%;
+    transition: ease .3s;
+
     &::placeholder {
       color: var(--texts);
+    }
+
+    :focus {
+      border-color: var(--highlight);
     }
   }
 
@@ -74,13 +79,6 @@ const Search = () => (
     <Wrapper>
     <InstantSearch searchClient={searchClient} indexName={algolia.indexName}>
       <SearchBox autoFocus translations={{ placeholder: "Pesquisar..." }} />
-      <Stats
-        translations={{
-          stats(nbHits, timeSpentMs) {
-            return `${nbHits} resultados encontrados em ${timeSpentMs}ms`
-          },
-        }}
-      />
       <Hits hitComponent={ Hit } />
     </InstantSearch>
   </Wrapper>

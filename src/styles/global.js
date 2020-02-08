@@ -289,16 +289,23 @@ body.dark {
     --background: #16202c;
     --white: #fff;
     --black: #222;
+    --postTitle: #FFF;
+    --postDescription: #EEE;
+    --postCategory: #EEE;
 }
+
 body.light {
     --borders: #dedede;
     --postColor: #111;
-    --texts: #555555;
+    --texts: #404040;
     --highlight: #ff7315;
     --mediumBackground: #f0f0f3;
     --background: #fff;
     --white: #fff;
     --black: #222;
+    --postTitle: #000;
+    --postDescription: #555;
+    --postCategory: #000;
 }
 `
 

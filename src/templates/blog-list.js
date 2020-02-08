@@ -20,7 +20,7 @@ const BlogList = props => {
         <SEO title="Home" />
         {postList.map(post => {
           const { fields, timeToRead, frontmatter } = post.node
-          const { background, category, date, description, title } = frontmatter
+          const { background, category, date, description, title, author } = frontmatter
   
           return (
             <PostItem key={fields.slug}
@@ -31,6 +31,7 @@ const BlogList = props => {
               timeToRead={timeToRead}
               title={title}
               description={description}
+              author={author}
             />
           )
         })}
@@ -65,6 +66,7 @@ export const query = graphql`
                     date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
                     description
                     title
+                    author
                 }
                 timeToRead
                 }

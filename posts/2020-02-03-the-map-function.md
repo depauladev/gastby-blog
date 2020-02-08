@@ -4,6 +4,8 @@ title: A função Map do Javascript
 description: Como funciona o loop Map e porque é tão usado
 category: JS
 background: "#F7E019"
+author: Luiz de Paula
+
 ---
 
 # Markdown

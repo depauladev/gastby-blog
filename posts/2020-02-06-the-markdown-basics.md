@@ -4,6 +4,7 @@ title: O básico de Markdown
 description: Algumas dicas para escrever melhor seu READ.md
 category: Tech
 background: "TOMATO"
+author: Luiz de Paula
 ---
 
 # Markdown

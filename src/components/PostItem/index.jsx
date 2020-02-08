@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from "styled-components"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import media from "styled-media-query"
+import { Clock } from 'styled-icons/feather/Clock'
 
 const Anchor = styled(AniLink)`
   color: var(--texts);
@@ -10,40 +11,40 @@ const Anchor = styled(AniLink)`
   text-decoration: none;
   transition: ease .3s;
   
-  &:hover {
+  &:hover,
+  &:hover h1{
     color: var(--highlight);
   }
 
   ${media.lessThan("large")`
     align-items: flex-start;
     flex-direction: column;
-    padding: 2rem 1rem;
+    /* padding: 2rem 1rem; */
   `}
 `
 
-const Wrapper = styled.section`
+const Wrapper = styled.article`
   align-items: center;
   border-bottom: 1px solid var(--borders);
   display: flex;
-  padding: 2rem 3rem;
-  width: 100%;
+  padding: 1.3rem 1rem;
+  width: 90%;
+  margin: 0 auto;
 `
 
-const Tag = styled.div`
+const Category = styled.div`
   align-items: center;
-  background: ${props =>
-    props.background ? props.background : "var(--highlight)"};
-  border-radius: 50%;
-  color: #000;
+  color: var(--postCategory);
   display: flex;
   font-size: 1.3rem;
   font-weight: 700;
   justify-content: center;
   min-height: 90px;
-  min-width: 90px;
   text-transform: uppercase;
+  width: 130px;
 
   ${media.lessThan("large")`
+    display: none;
     border-radius: 0;
     font-size: 1rem;
     min-height: auto;
@@ -64,35 +65,58 @@ const Info = styled.div`
   `}
 `
 
+const PostInfoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`
+
 const Datespan = styled.time`
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  margin-top: 8px;
   margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+`
+
+const StyledClock = styled(Clock)`
+    width: .8rem;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-bottom: 1px;
 `
 
 const Title = styled.h1`
-  font-size: 1.6rem;
+  font-size: 1.375rem;
   font-weight: 700;
   margin: 0.2rem 0 0.5rem;
+  color: var(--postTitle);
 `
 
 const Description = styled.p`
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.2;
+  color: var(--postDescription);
 `
 
-const PostItem = ({slug, category, date, timeToRead, title, description, background }) => (
+const PostItem = ({slug, category, date, timeToRead, title, description, author }) => (
     <Anchor fade duration={0.8} to={ slug }>
       <Wrapper>
-        <Tag background={background}>{ category }</Tag>
+        <Category>{ category }</Category>
         <Info>
-          <Datespan>{ date } • { timeToRead } min de leitura</Datespan>
+          <Datespan>{ date }</Datespan>
           <Title>
             { title }
           </Title>
           <Description>
             { description }
           </Description>
+          <PostInfoWrapper>
+            <Datespan>{ author }</Datespan>
+            {
+              timeToRead ? (<Datespan> <StyledClock /> { timeToRead } min de leitura </Datespan>) : ''
+            }
+          </PostInfoWrapper>
         </Info>
       </Wrapper>
     </Anchor>
@@ -100,11 +124,11 @@ const PostItem = ({slug, category, date, timeToRead, title, description, backgro
 
 PostItem.propTypes = {
   slug: PropTypes.string.isRequired,
-  background: PropTypes.string,
   category: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  author: PropTypes.string
 }
 
  export default PostItem
