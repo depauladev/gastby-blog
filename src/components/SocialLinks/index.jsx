@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import media from "styled-media-query"
 
 import Icons from './Icons'
 import links from './content'
@@ -7,6 +8,10 @@ import links from './content'
 const SocialLinksWrapper = styled.nav`
     margin: 2rem auto;
     width: 100%;
+
+    ${media.lessThan("large")`
+        display: none;
+    `}
 `
 
 const SocialLinksList = styled.ul`

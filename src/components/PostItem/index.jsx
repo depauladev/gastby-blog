@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from 'prop-types'
 import styled from "styled-components"
 import { Link } from "gatsby"
+import media from "styled-media-query"
 
 const Anchor = styled(Link)`
   color: var(--texts);
@@ -12,6 +13,12 @@ const Anchor = styled(Link)`
   &:hover {
     color: var(--highlight);
   }
+
+  ${media.lessThan("large")`
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2rem 1rem;
+  `}
 `
 
 const Wrapper = styled.section`
@@ -35,12 +42,26 @@ const Tag = styled.div`
   min-height: 90px;
   min-width: 90px;
   text-transform: uppercase;
+
+  ${media.lessThan("large")`
+    border-radius: 0;
+    font-size: 1rem;
+    min-height: auto;
+    min-width: auto;
+    padding: .2rem .5rem;
+    margin-bottom: .7rem;
+  `}
 `
 
 const Info = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 1.5rem;
+  
+  ${media.lessThan("large")`
+    margin: 0;
+    margin-left: 12px;
+  `}
 `
 
 const Datespan = styled.time`
@@ -82,7 +103,6 @@ PostItem.propTypes = {
   background: PropTypes.string,
   category: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  timeToRead: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 }

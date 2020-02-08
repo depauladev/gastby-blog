@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import media from "styled-media-query"
 
 import Profile from '../Profile'
 import SocialLinks from '../SocialLinks'
@@ -16,6 +17,14 @@ const SidebarWrapper = styled.aside`
     text-align: center;
     border-right: 1px solid var(--borders);
     background: var(--mediumBackground);
+    z-index: 10;
+
+    ${media.lessThan("large")`
+        align-items: flex-start;
+        height: auto;
+        padding: 1rem 2rem;
+        width: 100%;
+    `}
 `
 
 const Sidebar = () => (

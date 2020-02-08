@@ -1,5 +1,6 @@
-import styled from "styled-components"
 import React, { useState, useEffect } from "react"
+import styled from "styled-components"
+import media from "styled-media-query"
 import { Link } from "gatsby"
 
 import { Home } from "styled-icons/boxicons-solid/Home"
@@ -19,11 +20,26 @@ const MenuBarWrapper = styled.aside`
   right: 0;
   width: 3.75rem;
   border-left: 1px solid var(--borders);
+  z-index: 10;
+
+  ${media.lessThan("large")`
+    border-top: 1px solid var(--borders);
+    bottom: 0;
+    flex-direction: row;
+    height: auto;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+  `}
 `
 
 const MenuBarGroup = styled.div`
   display: flex;
   flex-direction: column;
+
+  ${media.lessThan("large")`
+    flex-direction: row;
+  `}
 `
 
 const MenuBarLink = styled(Link)`
@@ -47,6 +63,19 @@ const MenuBarItem = styled.span`
   &.light {
     color: var(--highlight);
   }
+
+  ${media.greaterThan("large")`
+    &:hover {
+      color: var(--highlight);
+    }
+  `}
+  
+  ${media.lessThan("large")`
+    height: 3.2rem;
+    padding: .9rem;
+    position: relative;
+    width: 3.2rem;
+  `}
 `
 
 

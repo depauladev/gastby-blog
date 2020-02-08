@@ -2,12 +2,19 @@ import React from "react"
 import propTypes from "prop-types"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import media from "styled-media-query"
 
 const Wrapper = styled.section`
   border-bottom: 1px solid var(--borders);
   border-top: 1px solid var(--borders);
   background: var(--mediumBackground);
   display: flex;
+
+  ${media.lessThan("large")`
+    padding: 2rem 1rem;
+    line-height: 1.3;
+    font-size: .9rem;
+  `}
 `
 
 const Anchor = styled(Link)`

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import media from "styled-media-query"
 
 import links from './content'
 
@@ -9,6 +10,10 @@ const Wrapper = styled.nav``
 const List = styled.ul`
     font-size: 1.2rem;
     font-weight: 300;
+
+    ${media.lessThan("large")`
+        display: none;
+    `}
 `
 
 const ListItem = styled.li`

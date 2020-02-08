@@ -2,6 +2,7 @@ import React from "react"
 import propTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from 'styled-components'
+import media from "styled-media-query"
 
 const PaginationWrapper = styled.section`
     align-items: center;
@@ -10,10 +11,16 @@ const PaginationWrapper = styled.section`
     display: flex;
     padding: 1.5rem 3rem;
     justify-content: space-between;
+
+    ${media.lessThan("large")`
+        font-size: .8rem;
+        padding: 1.4rem 1rem;
+    `}
+
     a {
         color: var(--texts);
-    text-decoration: none;
-    transition: color 0.5s;
+        text-decoration: none;
+        transition: color 0.5s;
 
         &:hover {
             color: var(--highlight);

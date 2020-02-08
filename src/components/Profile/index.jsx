@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import styled from 'styled-components'
-
+import media from "styled-media-query"
 
 import Avatar from '../Avatar'
 
@@ -16,6 +16,11 @@ const ProfileLink = styled(Link)`
     text-decoration: none;
     transition: color 0.5s;
 
+    ${media.lessThan("large")`
+        display: flex;
+        text-align: left;
+    `}
+
     &:hover {
         color: var(--highlight);
     }
@@ -24,6 +29,11 @@ const ProfileLink = styled(Link)`
 const ProfileName = styled.h1`
     font-size: 1.6rem;
     margin: 0.5rem auto 1.5rem auto;
+
+    ${media.lessThan("large")`
+        font-size: 1.2rem;
+        margin: 0 0 0 10px;
+    `}
 `
 
 const ProfilePosition = styled.small`
@@ -31,12 +41,21 @@ const ProfilePosition = styled.small`
     font-size: 1.2rem;
     font-weight: 300;
     margin-top: 5px;
+
+    ${media.lessThan("large")`
+        font-size: 0.8rem;
+        margin-top: 0.2rem;
+    `}
 `
 
 const ProfileDescription = styled.p`
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.4;
+
+    ${media.lessThan("large")`
+        display: none;
+    `}
 `
 
 const Profile = () => {
