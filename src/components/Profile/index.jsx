@@ -1,5 +1,6 @@
 import React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { useStaticQuery, graphql} from 'gatsby'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styled from 'styled-components'
 import media from "styled-media-query"
 
@@ -11,7 +12,7 @@ const Wrapper = styled.section`
     flex-direction: column;
 `
 
-const ProfileLink = styled(Link)`
+const ProfileLink = styled(AniLink)`
     color: var(--texts);
     text-decoration: none;
     transition: color 0.5s;
@@ -74,7 +75,7 @@ const Profile = () => {
 
     return (
         <Wrapper className="Profile-wrapper">
-            <ProfileLink to="/">
+            <ProfileLink fade duration={0.8} to="/">
                 <Avatar />
                 <ProfileName>
                     {name}

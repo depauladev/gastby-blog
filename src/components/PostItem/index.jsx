@@ -1,10 +1,10 @@
 import React from "react"
 import PropTypes from 'prop-types'
 import styled from "styled-components"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import media from "styled-media-query"
 
-const Anchor = styled(Link)`
+const Anchor = styled(AniLink)`
   color: var(--texts);
   display: flex;
   text-decoration: none;
@@ -82,7 +82,7 @@ const Description = styled.p`
 `
 
 const PostItem = ({slug, category, date, timeToRead, title, description, background }) => (
-    <Anchor to={ slug }>
+    <Anchor fade duration={0.8} to={ slug }>
       <Wrapper>
         <Tag background={background}>{ category }</Tag>
         <Info>

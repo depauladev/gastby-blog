@@ -42,6 +42,7 @@ module.exports = {
     },
     // New plugins go below this
     
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-plugin-algolia-search`,
       options: {

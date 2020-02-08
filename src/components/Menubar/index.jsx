@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import media from "styled-media-query"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import { Home } from "styled-icons/boxicons-solid/Home"
 import { SearchAlt2 as Search } from "styled-icons/boxicons-regular/SearchAlt2"
@@ -42,7 +42,7 @@ const MenuBarGroup = styled.div`
   `}
 `
 
-const MenuBarLink = styled(Link)`
+const MenuBarLink = styled(AniLink)`
   display: block;
 `
 
@@ -93,13 +93,13 @@ const Menubar = () =>  {
       <MenuBarWrapper>
         <MenuBarGroup>
   
-          <MenuBarLink to="/" title="Voltar para Home">
+          <MenuBarLink fade duration={0.8} to="/" title="Voltar para Home">
             <MenuBarItem>
               <Home />
             </MenuBarItem>
           </MenuBarLink>
   
-          <MenuBarLink to="/search/" title="Pesquisar">
+          <MenuBarLink fade duration={0.8} to="/search/" title="Pesquisar">
             <MenuBarItem>
               <Search />
             </MenuBarItem>

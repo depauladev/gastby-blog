@@ -1,7 +1,7 @@
 import React from "react"
 import propTypes from "prop-types"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import media from "styled-media-query"
 
 const Wrapper = styled.section`
@@ -17,7 +17,7 @@ const Wrapper = styled.section`
   `}
 `
 
-const Anchor = styled(Link)`
+const Anchor = styled(AniLink)`
   align-items: center;
   background: var(--mediumBackground);
   color: var(--highlight);
@@ -48,12 +48,12 @@ const Anchor = styled(Link)`
 const RecommendedPosts = ({ next, previous }) => (
     <Wrapper>
       {previous && (
-        <Anchor to={previous.fields.slug} className="previous">
+        <Anchor fade duration={0.8} to={previous.fields.slug} className="previous">
           {previous.frontmatter.title}
         </Anchor>
       )}
       {next && (
-        <Anchor to={next.fields.slug} className="next">
+        <Anchor fade duration={0.8} to={next.fields.slug} className="next">
           {next.frontmatter.title}
         </Anchor>
       )}

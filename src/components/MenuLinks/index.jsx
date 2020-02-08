@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import media from "styled-media-query"
 
 import links from './content'
@@ -24,7 +24,7 @@ const ListItem = styled.li`
     }
 `
 
-const Anchor = styled(Link)`
+const Anchor = styled(AniLink)`
     color: var(--texts);
     text-decoration: none;
     transition: ease .3s;
@@ -39,7 +39,7 @@ const MenuLinks = () => (
         <List>
             {links.map((link, i) => 
                 <ListItem key={i}>
-                    <Anchor to={link.url} activeClassName="active">
+                    <Anchor to={link.url} fade duration={0.8} activeClassName="active">
                         {link.label}
                     </Anchor>
                 </ListItem>
