@@ -9,7 +9,8 @@ const PaginationWrapper = styled.section`
     /* border-top: 1px solid var(--borders); */
     color: var(--texts);
     display: flex;
-    padding: 1.5rem 3rem;
+    padding: 3rem;
+
     justify-content: space-between;
 
     ${media.lessThan("large")`

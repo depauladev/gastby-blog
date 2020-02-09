@@ -11,7 +11,7 @@ const Wrapper = styled.nav`
 
 const List = styled.ul`
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 400;
 
     ${media.lessThan("large")`
         display: none;

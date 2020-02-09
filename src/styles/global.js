@@ -281,28 +281,28 @@ img {
 }
 
 body.dark {
-    --borders: #38444d;
-    --texts: #8899a6;
-    --postColor: #fff;
+    --borders: #ADB1BC;
+    --texts: #ADB1BC;
     --highlight: #ff7315;
-    --mediumBackground: #192734;
-    --background: #16202c;
+    --mediumBackground: #131B2B;
+    --background: #324255;
     --white: #fff;
     --black: #222;
+    --postColor: #fff;
     --postTitle: #FFF;
     --postDescription: #EEE;
     --postCategory: #EEE;
 }
 
 body.light {
-    --borders: #dedede;
-    --postColor: #111;
+    --borders: #CAD3E1;
     --texts: #404040;
     --highlight: #ff7315;
-    --mediumBackground: #f0f0f3;
-    --background: #fff;
+    --mediumBackground: #E1EEF4;
+    --background: #F6FBFB;
     --white: #fff;
     --black: #222;
+    --postColor: #111;
     --postTitle: #000;
     --postDescription: #555;
     --postCategory: #000;

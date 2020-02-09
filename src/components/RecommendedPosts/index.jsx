@@ -5,7 +5,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import media from "styled-media-query"
 
 const Wrapper = styled.section`
-  border-bottom: 1px solid var(--borders);
+  /* border-bottom: 1px solid var(--borders); */
   border-top: 1px solid var(--borders);
   background: var(--mediumBackground);
   display: flex;
@@ -20,25 +20,30 @@ const Wrapper = styled.section`
 const Anchor = styled(AniLink)`
   align-items: center;
   background: var(--mediumBackground);
-  color: var(--highlight);
+  color: var(--texts);
   display: flex;
   padding: 3rem;
   text-decoration: none;
-  transition: background 0.5s;
+  transition: ease 0.3s;
   width: 50%;
+
   &:hover {
-    background: var(--borders);
+    color: var(--highlight);
   }
+
   &.previous {
     border-right: 1px solid var(--borders);
   }
+
   &.next {
     justify-content: flex-end;
   }
+
   &.previous:before {
     content: "\\2190";
     margin-right: 0.5rem;
   }
+
   &.next:after {
     content: "\\2192";
     margin-left: 0.5rem;
