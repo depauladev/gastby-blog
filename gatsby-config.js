@@ -6,7 +6,7 @@ module.exports = {
     title: `DePaula Blog`,
     description: `I made cool things on internet :)`,
     author: `@depauladev`,
-    position: "Fullstack developer",
+    position: "Developer",
     name: "Luiz de Paula"
   },
   plugins: [

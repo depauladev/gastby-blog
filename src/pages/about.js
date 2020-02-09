@@ -21,7 +21,7 @@ const AboutPage = () => (
                 Tempos depois fui para Solintel/Tars onde iniciei meus trabalhos no back-end só que também atuando no front com Knockout.js e ASP.Net.
                 Ajudei a desenvolver aplicações como <a href="https://si.solintel.com.br/" target="_blank" rel="noopener noreferrer"> ERP Solintel</a> e <a href="https://www.walledgarden.com.br" target="_blank" rel="noopener noreferrer">WalledGarden</a>,
                 tambem tomei a frente no projeto do sistema de gerenciamento de filas para as UPAs de Londrina.
-                Hoje trabalho com tótens de auto atendimento para provedores de telefonia e internet e restaurantes.
+                Hoje trabalho com tótens de auto atendimento para provedores e restaurantes.
             </p>
             <p>
                 Meu conhecimento em grande parte foi de artigos e videos gratuitos sejam em portugues ou inglês. 
@@ -60,7 +60,7 @@ const AboutPage = () => (
                 <h3>General</h3>
                 <ul>
                     <li>Git</li>
-                    <li>Tortoise code versioning</li>
+                    <li>TortoiseHg</li>
                     <li>SQL</li>
                     <li>Graphql</li>
                     <li>PostgreSQL</li>
