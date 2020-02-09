@@ -17,7 +17,7 @@ const BlogList = props => {
 
     return (
         <Layout>
-        <SEO title="Home" />
+        <SEO title="Home"/>
         {postList.map(post => {
           const { fields, timeToRead, frontmatter } = post.node
           const { background, category, date, description, title, author } = frontmatter
