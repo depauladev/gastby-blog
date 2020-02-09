@@ -27,6 +27,11 @@ const Anchor = styled(AniLink)`
   transition: ease 0.3s;
   width: 50%;
 
+
+  ${media.lessThan("large")`
+    padding: 1rem;
+  `}
+
   &:hover {
     color: var(--highlight);
   }

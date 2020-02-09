@@ -284,8 +284,8 @@ body.dark {
     --borders: #ADB1BC;
     --texts: #ADB1BC;
     --highlight: #ff7315;
-    --mediumBackground: #131B2B;
-    --background: #324255;
+    --background: #131B2B;
+    --mediumBackground: #324255;
     --white: #fff;
     --black: #222;
     --postColor: #fff;
