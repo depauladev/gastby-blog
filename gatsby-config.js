@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `DePaula Blog`,
     description: `I made cool things on internet :)`,
-    siteDescription: `Fiz esse blog com intuito de ajudar com dicas de Javascript, C#, .Net, Node.js, SoftSkills`,
+    siteDescription: `Criando coisas na internet e dando dicas de Javascript, CSS, C#, .Net, Node.js, Soft skills`,
     author: `@depauladev`,
     position: "Developer",
     name: "Luiz de Paula",
