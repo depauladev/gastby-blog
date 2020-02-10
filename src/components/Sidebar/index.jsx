@@ -20,9 +20,10 @@ const SidebarWrapper = styled.aside`
     z-index: 10;
 
     ${media.lessThan("large")`
+        border-right: 0;
         align-items: flex-start;
         height: auto;
-        padding: 1rem 2rem;
+        padding: 1rem;
         width: 100%;
     `}
 `
