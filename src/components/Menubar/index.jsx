@@ -4,9 +4,10 @@ import media from "styled-media-query"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import { Home } from "styled-icons/boxicons-solid/Home"
-import { SearchAlt2 as Search } from "styled-icons/boxicons-regular/SearchAlt2"
+// import { SearchAlt2 as Search } from "styled-icons/boxicons-regular/SearchAlt2"
 import { UpArrowAlt as Arrow } from "styled-icons/boxicons-regular/UpArrowAlt"
 import { Bulb as Light } from "styled-icons/boxicons-regular/Bulb"
+import { QuestionMark as Question } from "styled-icons/boxicons-regular/QuestionMark"
 
 const MenuBarWrapper = styled.aside`
   align-items: center;
@@ -44,6 +45,14 @@ const MenuBarGroup = styled.div`
 
 const MenuBarLink = styled(AniLink)`
   display: block;
+
+  &.about {
+    display: none;
+
+    ${media.lessThan("large")`
+      display: block;
+  `}
+  }
 `
 
 const MenuBarItem = styled.span`
@@ -97,19 +106,27 @@ const Menubar = () =>  {
 
   return (
       <MenuBarWrapper>
+
         <MenuBarGroup>
-  
           <MenuBarLink fade duration={0.8} to="/" title="Voltar para Home">
             <MenuBarItem>
               <Home />
             </MenuBarItem>
           </MenuBarLink>
-  
-          <MenuBarLink fade duration={0.8} to="/search/" title="Pesquisar">
+
+          <MenuBarLink className="about" fade duration={0.8} to="/about" title="Sobre mim">
+            <MenuBarItem>
+              <Question />
+            </MenuBarItem>
+          </MenuBarLink>
+        
+        {/*   
+          <MenuBarLink fade duration={0.8} to="/search" title="Pesquisar">
             <MenuBarItem>
               <Search />
             </MenuBarItem>
-          </MenuBarLink>
+          </MenuBarLink> 
+        */}
         </MenuBarGroup>
   
         <MenuBarGroup>
@@ -120,10 +137,12 @@ const Menubar = () =>  {
           >
             <Light />
           </MenuBarItem>
+
           <MenuBarItem title="Ir para o Topo" onClick={scrollTop}>
             <Arrow />
           </MenuBarItem>
         </MenuBarGroup>
+
       </MenuBarWrapper>
   )
 }

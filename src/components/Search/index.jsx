@@ -78,7 +78,7 @@ export const Wrapper = styled.section`
 const Search = () => (
     <Wrapper>
     <InstantSearch searchClient={searchClient} indexName={algolia.indexName}>
-      <SearchBox autoFocus translations={{ placeholder: "Pesquisar..." }} />
+      <SearchBox translations={{ placeholder: "Pesquisar..." }} />
       <Hits hitComponent={ Hit } />
     </InstantSearch>
   </Wrapper>
