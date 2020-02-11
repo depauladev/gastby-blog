@@ -14,7 +14,7 @@ Fui descobrindo que o problema era maior me emaranhando nos códigos que eu mesm
 
 Provavelmente isso já se passou com você.
 
-![Codes](/assets/img/cods.jpg)
+![Codes](/assets/img/cods.jpeg)
 
 É muito fácil se encontrar na situação em que se sente uma fraude, de que conseguiu o emprego por sorte, de que só está onde está por falta de pessoas na área e coisas assim. Eu sei que é comum se sentir assim e *não deveria ser.*
 
