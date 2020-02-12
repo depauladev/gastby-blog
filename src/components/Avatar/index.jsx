@@ -7,13 +7,7 @@ import media from "styled-media-query"
 const AvatarStyled = styled(Img)`
     border-radius:65% 35% 69% 31% / 39% 61% 39% 61% ;
     height: 3.75rem;
-    margin: auto;
     width: 3.75rem;
-    
-    ${media.lessThan("large")`
-        height: 1.875rem;
-        width: 1.875rem;
-    `}
 `
 
 const Avatar = () => {

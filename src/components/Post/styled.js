@@ -17,7 +17,7 @@ export const PostTitle = styled.h1`
   font-size: 4rem;
   font-weight: 700;
   padding: 0 1.4rem;
-  margin: 1rem auto .3rem auto;
+  margin: 1rem auto;
 
   ${media.lessThan("large")`
     font-size: 2.8rem;

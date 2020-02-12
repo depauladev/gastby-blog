@@ -6,10 +6,9 @@ import media from "styled-media-query"
 
 const PaginationWrapper = styled.section`
     align-items: center;
-    /* border-top: 1px solid var(--borders); */
     color: var(--texts);
     display: flex;
-    padding: 3rem;
+    margin-top: 60px;
 
     justify-content: space-between;
 

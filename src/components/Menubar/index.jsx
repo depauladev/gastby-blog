@@ -13,31 +13,16 @@ const MenuBarWrapper = styled.aside`
   align-items: center;
   background: var(--mediumBackground);
   display: flex;
-  flex-direction: column;
-  height: 100vh;
   justify-content: space-between;
-  padding: 0.8rem 0;
-  position: fixed;
-  right: 0;
-  width: 3.75rem;
-  border-left: 1px solid var(--borders);
   z-index: 10;
-
-  ${media.lessThan("large")`
-    border-top: 1px solid var(--borders);
-    border-left: 0;
-    bottom: 0;
-    flex-direction: row;
-    height: auto;
-    padding: 0;
-    position: fixed;
-    width: 100%;
-  `}
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #FFF;
 `
 
 const MenuBarGroup = styled.div`
   display: flex;
-  flex-direction: column;
 
   ${media.lessThan("large")`
     flex-direction: row;
@@ -46,18 +31,10 @@ const MenuBarGroup = styled.div`
 
 const MenuBarLink = styled(AniLink)`
   display: block;
-
-  &.about {
-    display: none;
-
-    ${media.lessThan("large")`
-      display: block;
-  `}
-  }
 `
 
 const MenuBarItem = styled.span`
-  color: var(--texts);
+  color: #FFF;
   cursor: pointer;
   display: block;
   height: 3.75rem;
@@ -70,15 +47,9 @@ const MenuBarItem = styled.span`
     color: var(--highlight);
   }
 
-  &.light {
+  &.dark {
     color: var(--highlight);
   }
-
-  ${media.greaterThan("large")`
-    &:hover {
-      color: var(--highlight);
-    }
-  `}
   
   ${media.lessThan("large")`
     height: 3.2rem;

@@ -1,32 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
-import media from "styled-media-query"
+// import media from "styled-media-query"
 
 import Icons from './Icons'
 import links from './content'
 
 const SocialLinksWrapper = styled.nav`
-    margin: 2rem auto;
-    width: 100%;
 
-    ${media.lessThan("large")`
-        display: none;
-    `}
 `
 
 const SocialLinksList = styled.ul`
     align-items: center;
     display: flex;
-    justify-content: space-around;
     list-style: none;
 `
 
-const SocialLinksItem = styled.li``
+const SocialLinksItem = styled.li`
+    margin-right: 20px;
+`
 
 const SocialLinksLink = styled.a`
-    color: var(--texts);
     text-decoration: none;
     transition: color .3s;
+    color: #FFF;
 
     &:hover {
         color: var(--highlight)

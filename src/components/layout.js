@@ -2,15 +2,15 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from 'styled-components'
 import media from "styled-media-query"
-import { TransitionPortal } from "gatsby-plugin-transition-link"
+// import { TransitionPortal } from "gatsby-plugin-transition-link"
 
 import GlobalStyles from '../styles/global'
 
-import Sidebar from './Sidebar'
+import Header from '../components/Header'
 import Menubar from './Menubar'
 
 const LayoutWrapper = styled.section`
-  display: flex;
+  min-height: 100vh;
 
   ${media.lessThan("large")`
     flex-direction: column;
@@ -19,12 +19,12 @@ const LayoutWrapper = styled.section`
 
 const LayoutMain = styled.main`
   background-color: var(--background);
-  min-height: 100vh;
-  padding: 0 3.75rem 0 20rem;
-  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 26px 0;
 
   ${media.lessThan("large")`
-    padding: 4.125rem 0 3rem 0;
+    padding:0;
   `}
 `
 
@@ -32,13 +32,11 @@ const Layout = ({ children }) => {
   return (
     <LayoutWrapper>
       <GlobalStyles />
-      <TransitionPortal>
-        <Sidebar />
-      </TransitionPortal>
-      <LayoutMain>{children}</LayoutMain>
-      <TransitionPortal>
-        <Menubar />
-      </TransitionPortal>
+
+      <Header />
+      <LayoutMain>{children}</LayoutMain>   
+      <Menubar />
+    
     </LayoutWrapper>
   )
 }

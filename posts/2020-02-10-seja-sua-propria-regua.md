@@ -1,7 +1,7 @@
 ---
 date: 2020-02-10 00:00:00
 title: Seja sua própria régua
-description: Não é justo se comparar com quem não partiu do mesmo ponto e enfrentou os mesmos obstáculos.
+description: Não é justo se comparar com quem não partiu do mesmo ponto e não enfrentou os mesmos obstáculos.
 category: Misc
 author: Luiz de Paula
 ---

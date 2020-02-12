@@ -10,26 +10,30 @@ const Anchor = styled(AniLink)`
   display: flex;
   text-decoration: none;
   transition: ease .3s;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
+  border: 1px solid transparent;
+  padding: 30px;
+  background-color: var(--PostItemBackground);
+  border-radius: 8px;
+  margin-bottom: 25px;
   
-  &:hover,
-  &:hover h1{
+  &:hover {
+    border: 1px solid rgba(136,149,162,0.2);
+    color: var(--highlight);
+  }
+
+  &:hover h1 {
     color: var(--highlight);
   }
 
   ${media.lessThan("large")`
-    align-items: flex-start;
-    flex-direction: column;
-    /* padding: 2rem 1rem; */
+    margin: 25px;
   `}
 `
 
 const Wrapper = styled.article`
   align-items: center;
-  border-bottom: 1px solid var(--borders);
   display: flex;
-  padding: 1.3rem 1rem;
-  width: 90%;
-  margin: 0 auto;
 `
 
 const Category = styled.div`
@@ -90,6 +94,7 @@ const Title = styled.h1`
   font-weight: 700;
   margin: 0.2rem 0 0.5rem;
   color: var(--postTitle);
+  transition: ease .3s;
 `
 
 const Description = styled.p`

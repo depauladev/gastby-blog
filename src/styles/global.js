@@ -280,10 +280,16 @@ img {
     height: auto;
 }
 
+@keyframes blink {
+    to {
+      opacity: 0;
+    }
+}
+
 body.dark {
     --borders: #ADB1BC;
     --texts: #ADB1BC;
-    --highlight: #ff7315;
+    --highlight: #000;
     --background: #131B2B;
     --mediumBackground: #324255;
     --white: #fff;
@@ -292,20 +298,22 @@ body.dark {
     --postTitle: #FFF;
     --postDescription: #EEE;
     --postCategory: #EEE;
+    --PostItemBackground: #324255;
 }
 
 body.light {
     --borders: #CAD3E1;
     --texts: #404040;
-    --highlight: #ff7315;
-    --mediumBackground: #E1EEF4;
-    --background: #F6FBFB;
+    --highlight: #000;
+    --mediumBackground: #2e9fff;
+    --background: #f3f5f7;
     --white: #fff;
     --black: #222;
     --postColor: #111;
     --postTitle: #000;
     --postDescription: #555;
     --postCategory: #000;
+    --PostItemBackground: #FFF;
 }
 `
 

@@ -4,57 +4,80 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styled from 'styled-components'
 import media from "styled-media-query"
 
-import Avatar from '../Avatar'
+import SocialLinks from '../SocialLinks'
+
+const Caret = styled.span`
+    -webkit-animation-name: blink;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+        
+    -moz-animation-name: blink;
+    -moz-animation-duration: 1s;
+    -moz-animation-iteration-count: infinite;
+    
+    -ms-animation-name: blink;
+    -ms-animation-duration: 1s;
+    -ms-animation-iteration-count: infinite;
+    
+    -o-animation-name: blink;
+    -o-animation-duration: 1s;
+    -o-animation-iteration-count: infinite;
+    
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+    top: -10px;
+    left: 3px;
+    position: relative;
+`
 
 const Wrapper = styled.section`
-    color: var(--texts);
+    max-width: 900px;
+    width: 900px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
+`
+
+const SocialWrapper = styled.div`
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+`
+
+const ProfileWrapper = styled.section`
+    display: flex;
 `
 
 const ProfileLink = styled(AniLink)`
-    color: var(--texts);
     text-decoration: none;
-    transition: color 0.5s;
+    color: #FFF;
 
-    ${media.lessThan("large")`
-        display: flex;
-        text-align: left;
-    `}
-
-    &:hover {
+    &:hover h1{
         color: var(--highlight);
     }
 `
 
 const ProfileName = styled.h1`
-    font-size: 1.6rem;
-    margin: 0.5rem auto 1.5rem auto;
+    font-size: 3.6rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.5s;
+    font-family: monospace;
 
     ${media.lessThan("large")`
-        font-size: 1.2rem;
-        margin: 0 0 0 10px;
-    `}
-`
-
-const ProfilePosition = styled.small`
-    display: block;
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin-top: 5px;
-
-    ${media.lessThan("large")`
-        font-size: 0.8rem;
-        margin-top: 0.2rem;
+        margin-bottom: 0;
     `}
 `
 
 const ProfileDescription = styled.p`
-    font-size: 1rem;
+    font-size: 28px;
     font-weight: 300;
-    line-height: 1.4;
 
     ${media.lessThan("large")`
+        font-size: 18px;
         display: none;
     `}
 `
@@ -71,18 +94,19 @@ const Profile = () => {
             }
         }          
     `)
-    const { name, position, description } = query.site.siteMetadata
+    const { name, description } = query.site.siteMetadata
 
     return (
-        <Wrapper className="Profile-wrapper">
+        <Wrapper>
             <ProfileLink fade duration={0.8} to="/">
-                <Avatar />
-                <ProfileName>
-                    {name}
-                    <ProfilePosition>{position}</ProfilePosition>
-                </ProfileName>
+                <ProfileWrapper>
+                    <ProfileName>{name}<Caret>_</Caret></ProfileName>
+                </ProfileWrapper>
+                <ProfileDescription>{description}</ProfileDescription>
             </ProfileLink>
-            <ProfileDescription>{description}</ProfileDescription>
+            <SocialWrapper>
+                <SocialLinks />
+            </SocialWrapper>
         </Wrapper>
     )
 }
