@@ -8,13 +8,13 @@ import * as S from '../components/Post/styled'
 const AboutPage = () => (
     <Layout>
       <SEO title={"Sobre mim"} />
-      <S.MainContent>
+      <S.MainContent style={{
+          padding: '0rem 5rem'
+      }}>
         <article>
             <h1>Sobre mim</h1>
 
-            <p>
-                Olá sou o Luiz de Paula, sou de Londrina/PR.
-            </p>
+            <p>Olá sou o Luiz de Paula, sou de Londrina/PR.</p>
             <p>
                 Comecei meus estudos em programação no primeiro dia do ano de 2018
                 e já em abril consegui meu primeiro trabalho como front-end onde fazia sites institucionais, e-commerces VTEX e Loja Integrada.

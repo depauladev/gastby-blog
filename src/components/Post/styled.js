@@ -203,6 +203,10 @@ export const MainContent = styled.section`
     font-weight: 700;
   }
 
+  em {
+    font-style: italic;
+  }
+
   .gatsby-resp-image-background-image {
     z-index: 2;
     opacity: 1 !important;

@@ -28,6 +28,6 @@ collections:
           label: "Category", 
           name: "category", 
           widget: "select",
-          options: ["JS", "Tech", "Misc", ".NET", "C#", "CSS"]
+          options: ["JS", "Tech", "Misc", ".NET", "C#", "CSS", "UX", "Ágil"]
       }
       - { label: "Body", name: "body", widget: "markdown" }
