@@ -25,7 +25,7 @@ const SocialLinksLink = styled.a`
     color: #FFF;
 
     &:hover {
-        color: var(--highlight)
+        color: var(--postHightlight)
     }
 `
 

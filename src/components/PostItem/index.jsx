@@ -19,11 +19,11 @@ const Anchor = styled(AniLink)`
   
   &:hover {
     border: 1px solid rgba(136,149,162,0.2);
-    color: var(--highlight);
+    color: var(--postHover);
   }
 
   &:hover h1 {
-    color: var(--highlight);
+    color: var(--postHover);
   }
 
   ${media.lessThan("large")`

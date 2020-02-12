@@ -22,9 +22,11 @@ const LayoutMain = styled.main`
   max-width: 900px;
   margin: 0 auto;
   padding: 26px 0;
+  padding-bottom: 60px;
 
   ${media.lessThan("large")`
     padding:0;
+    padding-bottom: 60px;
   `}
 `
 

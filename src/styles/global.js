@@ -299,6 +299,8 @@ body.dark {
     --postDescription: #EEE;
     --postCategory: #EEE;
     --PostItemBackground: #324255;
+    --postHightlight: #2e9fff; 
+    --postHover: #2e9fff;
 }
 
 body.light {
@@ -314,6 +316,8 @@ body.light {
     --postDescription: #555;
     --postCategory: #000;
     --PostItemBackground: #FFF;
+    --postHightlight: #111; 
+    --postHover: #2e9fff;
 }
 `
 

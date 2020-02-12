@@ -5,10 +5,10 @@ export const PostHeader = styled.header`
   color: var(--postColor);
   margin: auto;
   max-width: 70rem;
-  padding: 5rem 5rem 0;
+  padding: 0 5rem;
 
   ${media.lessThan("large")`
-    padding: 3rem 0 0;
+    padding: 1rem 0;
     max-width: 100%;
   `}
 `
@@ -141,13 +141,13 @@ export const MainContent = styled.section`
 
   blockquote {
     color: var(--postColor);
-    border-left: 0.3rem solid var(--highlight);
+    border-left: 0.3rem solid var(--postHover);
     padding: 0 1.875rem;
     margin: 3.125rem auto;
   }
 
   hr {
-    border: 1px solid var(--borders);
+    border: 1px solid var(--postHightlight);
     margin: 3rem auto;
   }
 
@@ -235,13 +235,13 @@ export const MainContent = styled.section`
   }
 
   a {
-    border-bottom: 1px dashed var(--highlight);
-    color: var(--highlight);
+    border-bottom: 1px dashed var(--postHover);
+    color: var(--postHover);
     text-decoration: none;
     transition: opacity 0.5s;
 
     svg {
-      color: var(--postColor);
+      color: var(--postHover);
     }
 
     &:hover {

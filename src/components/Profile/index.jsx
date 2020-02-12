@@ -4,8 +4,6 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styled from 'styled-components'
 import media from "styled-media-query"
 
-import SocialLinks from '../SocialLinks'
-
 const Caret = styled.span`
     -webkit-animation-name: blink;
     -webkit-animation-duration: 1s;
@@ -27,23 +25,9 @@ const Caret = styled.span`
     animation-duration: 1s;
     animation-iteration-count: infinite;
 
-    top: -10px;
-    left: 3px;
+    top: -8px;
+    left: 4px;
     position: relative;
-`
-
-const Wrapper = styled.section`
-    max-width: 900px;
-    width: 900px;
-    margin: 0 auto;
-    display: flex;
-`
-
-const SocialWrapper = styled.div`
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
 `
 
 const ProfileWrapper = styled.section`
@@ -97,17 +81,12 @@ const Profile = () => {
     const { name, description } = query.site.siteMetadata
 
     return (
-        <Wrapper>
-            <ProfileLink fade duration={0.8} to="/">
-                <ProfileWrapper>
-                    <ProfileName>{name}<Caret>_</Caret></ProfileName>
-                </ProfileWrapper>
-                <ProfileDescription>{description}</ProfileDescription>
-            </ProfileLink>
-            <SocialWrapper>
-                <SocialLinks />
-            </SocialWrapper>
-        </Wrapper>
+        <ProfileLink fade duration={0.8} to="/">
+            <ProfileWrapper>
+                <ProfileName>{name}<Caret>_</Caret></ProfileName>
+            </ProfileWrapper>
+            <ProfileDescription>{description}</ProfileDescription>
+        </ProfileLink>
     )
 }
 
