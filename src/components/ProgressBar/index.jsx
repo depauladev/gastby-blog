@@ -4,10 +4,6 @@ import media from 'styled-media-query'
 
 const Bar = styled.div`
     position: fixed;
-    background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, .7) ${({ scroll }) => scroll},
-        transparent  0);
     width: 100%;
     top: 0;
     left: 0;
@@ -25,7 +21,7 @@ class ProgressBar extends React.Component  {
         super(props)
 
         this.state = {
-            scrolled: '0%'
+            background: ''
         }
     }
 
@@ -43,14 +39,20 @@ class ProgressBar extends React.Component  {
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
         const scrolled = `${scrollPx / winHeightPx * 100}%`;
+        const background = `linear-gradient(
+            to right,
+            rgba(0, 0, 0, .7) ${scrolled},
+            transparent  0)`
     
         this.setState({
-            scrolled: scrolled
+            background
         })
     };
 
     render() {
-        return <Bar scroll={this.state.scrolled}/>
+        return <Bar style={{
+            background: this.state.background
+        }}/>
     }
 }
 
