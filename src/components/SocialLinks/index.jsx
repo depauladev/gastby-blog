@@ -26,6 +26,10 @@ const SocialLinksLink = styled.a`
     &:hover {
         color: var(--postHover);
     }
+
+    body.dark &:hover {
+        color: var(--highlight);
+    }
 `
 
 const IconWrapper = styled.div`

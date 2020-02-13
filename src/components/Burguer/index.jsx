@@ -20,7 +20,7 @@ const StyledBurger = styled.button`
     div {
         width: 2rem;
         height: 0.25rem;
-        background: ${({ open }) => open ? 'var(--postTitle)' : 'var(--PostItemBackground)'};
+        background: #FFF;
         border-radius: 10px;
         transition: all 0.3s linear;
         position: relative;
@@ -30,7 +30,7 @@ const StyledBurger = styled.button`
 
 const Burger = ({ open, setOpen }) => {
     return (
-        <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        <StyledBurger open={open} onClick={() => setOpen(!open)} title="Menu">
         <div />
         <div />
         <div />

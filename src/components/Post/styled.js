@@ -64,7 +64,7 @@ export const MainContent = styled.section`
   padding: 2rem 5rem;
 
   ${media.lessThan("large")`
-    padding: 1rem 0;
+    padding: 1rem 0 !important;
     max-width: 100%;
   `}
 

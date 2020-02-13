@@ -53,6 +53,7 @@ const ProfileName = styled.h1`
 
     ${media.lessThan("large")`
         margin-bottom: 0;
+        font-size: 2.6rem; 
     `}
 `
 

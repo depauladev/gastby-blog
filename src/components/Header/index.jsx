@@ -19,6 +19,10 @@ const HeaderWrapper = styled.div`
 
     ${media.lessThan("large")`
         padding: 1rem;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
     `}
 `
 const MenuWrapper = styled.div`
@@ -26,10 +30,6 @@ const MenuWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-
-    ${media.lessThan("large")`
-        display: none;
-    `}
 `
 
 const Container = styled.div`

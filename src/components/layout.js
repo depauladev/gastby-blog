@@ -25,7 +25,7 @@ const LayoutMain = styled.main`
 
   ${media.lessThan("large")`
     padding:0;
-    padding-bottom: 60px;
+    padding-top: 70px;
   `}
 `
 
