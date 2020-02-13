@@ -106,7 +106,6 @@ const MenuBarItem = styled.span`
 
 const Menu = ({ open, setOpen }) => {
     const [theme, setTheme] = useState(null)
-
     const isDarkMode = theme === "dark"
   
     useEffect(() => {
@@ -124,7 +123,7 @@ const Menu = ({ open, setOpen }) => {
             window.removeEventListener('keydown', handleEsc)
         }
 
-    }, [])
+    }, [setOpen])
 
     return (
         <StyledMenu open={open}>

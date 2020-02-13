@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from 'styled-components'
 import media from "styled-media-query"
-// import { TransitionPortal } from "gatsby-plugin-transition-link"
 
 import GlobalStyles from '../styles/global'
 
