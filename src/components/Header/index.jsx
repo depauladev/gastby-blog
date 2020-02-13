@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react';
 import styled from 'styled-components'
 import media from "styled-media-query"
 
 import Profile from '../Profile'
-import SocialLinks from '../SocialLinks'
+
+import Burguer from '../Burguer'
+import Menu from '../Menu'
 
 const HeaderWrapper = styled.div`
     padding: 35px 0;
@@ -19,7 +21,7 @@ const HeaderWrapper = styled.div`
         padding: 1rem;
     `}
 `
-const SocialWrapper = styled.div`
+const MenuWrapper = styled.div`
     flex: 1;
     display: flex;
     justify-content: flex-end;
@@ -37,15 +39,20 @@ const Container = styled.div`
     display: flex;
 `
 
-const Header = () => (
-    <HeaderWrapper>
-        <Container>
-            <Profile />
-            <SocialWrapper>
-                <SocialLinks />
-            </SocialWrapper>
-        </Container>
-    </HeaderWrapper>
-)
+const Header = () => {
+    const [open, setOpen] = useState(false);
+
+    return (
+        <HeaderWrapper>
+            <Container>
+                <Profile />
+                <MenuWrapper>
+                    <Burguer open={open} setOpen={setOpen} />
+                    <Menu open={open} setOpen={setOpen} />
+                </MenuWrapper>
+            </Container>
+        </HeaderWrapper>
+    )
+}
 
 export default Header

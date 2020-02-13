@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-// import media from "styled-media-query"
 
 import Icons from './Icons'
 import links from './content'
@@ -25,7 +24,7 @@ const SocialLinksLink = styled.a`
     color: #FFF;
 
     &:hover {
-        color: var(--postHightlight)
+        color: var(--postHover);
     }
 `
 

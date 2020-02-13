@@ -7,7 +7,6 @@ import media from "styled-media-query"
 import GlobalStyles from '../styles/global'
 
 import Header from '../components/Header'
-import Menubar from './Menubar'
 
 const LayoutWrapper = styled.section`
   min-height: 100vh;
@@ -34,11 +33,8 @@ const Layout = ({ children }) => {
   return (
     <LayoutWrapper>
       <GlobalStyles />
-
       <Header />
       <LayoutMain>{children}</LayoutMain>   
-      <Menubar />
-    
     </LayoutWrapper>
   )
 }
