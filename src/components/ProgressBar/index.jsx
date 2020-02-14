@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import React from 'react'
-import media from 'styled-media-query'
 
 const Bar = styled.div`
     position: fixed;

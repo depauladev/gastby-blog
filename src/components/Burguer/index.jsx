@@ -12,28 +12,39 @@ const StyledBurger = styled.button`
     cursor: pointer;
     padding: 0;
     z-index: 10;
+    transition: ease .4s;
 
     &:focus {
         outline: none;
     }
 
+    :hover  {
+        height: 1.4rem;
+    }
+
+    :hover .second {
+        height: 0.3rem;
+        width: 1.6rem;
+    }
+
     div {
+        margin: 0 auto;
         width: 2rem;
         height: 0.25rem;
         background: #FFF;
         border-radius: 10px;
-        transition: all 0.3s linear;
+        transition: ease 0.3s;
         position: relative;
-        transform-origin: 1px;
+        transform-origin: 1px; 
     }
 `;
 
 const Burger = ({ open, setOpen }) => {
     return (
         <StyledBurger open={open} onClick={() => setOpen(!open)} title="Menu">
-        <div />
-        <div />
-        <div />
+        <div className="first"/>
+        <div className="second"/>
+        <div className="third"/>
         </StyledBurger>
     )
 }

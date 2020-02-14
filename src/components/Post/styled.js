@@ -30,6 +30,7 @@ export const PostDescription = styled.h2`
   font-size: 2rem;
   font-weight: 200;
   padding: 0 1.4rem;
+  line-height: 2.4rem;
 
   ${media.lessThan("large")`
     font-size: 1.6rem;

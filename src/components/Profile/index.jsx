@@ -37,10 +37,6 @@ const ProfileWrapper = styled.section`
 const ProfileLink = styled(AniLink)`
     text-decoration: none;
     color: #FFF;
-
-    &:hover h1{
-        color: var(--highlight);
-    }
 `
 
 const ProfileName = styled.h1`

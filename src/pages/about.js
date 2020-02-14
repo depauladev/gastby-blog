@@ -29,7 +29,7 @@ const AboutPage = () => (
             </p>
 
             <p>
-                Gostaria de agradecer meu grande amor Ana Luisa por me apoiar e me ajudar em tudo que faço.
+                Gostaria de agradecer ao meu grande amor Ana Luisa por me apoiar e me ajudar em tudo que faço.
             </p>
 
             <div>

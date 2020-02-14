@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import RecommendedPosts from "../components/RecommendedPosts"
 import ProgressBar from "../components/ProgressBar"
+import Scroller from "../components/Scroller"
+
 
 // Onde ficam os estilos dos posts
 import * as S from '../components/Post/styled'
@@ -17,6 +19,7 @@ const BlogPost = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <Scroller />
       <ProgressBar scroll="70%"/>
       <SEO title={title} description={description}/>
       <S.PostHeader>
