@@ -28,6 +28,10 @@ const AboutPage = () => (
                 Então como parte do meu agradecimento vou tentar devolver à comunidade o conhecimento que pude adquirir.
             </p>
 
+            <p>
+                Gostaria de agradecer meu grande amor Ana Luisa por me apoiar e me ajudar em tudo que faço.
+            </p>
+
             <div>
                 <h2>Habilidades</h2>
 

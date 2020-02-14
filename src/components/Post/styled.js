@@ -251,5 +251,9 @@ export const MainContent = styled.section`
     &:hover {
       opacity: 0.8;
     }
+
+    div.agradecimento {
+      font-size: 13px;
+    }
   }
 `

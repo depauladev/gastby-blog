@@ -9,10 +9,6 @@ const Bar = styled.div`
     left: 0;
     height: 4px;
     z-index: 30;
-
-    ${media.lessThan("large")`
-        top: 65px;
-    `}
 `
 
 class ProgressBar extends React.Component  {

@@ -150,9 +150,9 @@ const Menu = ({ open, setOpen }) => {
                 <Anchor to="/about" title="Sobre mim">
                     Sobre mim
                 </Anchor>
-                <Anchor to="/search" title="Pesquisar">
+                {/* <Anchor to="/search" title="Pesquisar">
                     Pesquisar
-                </Anchor>
+                </Anchor> */}
             </Navegacao>
 
             <SocialDiv>
