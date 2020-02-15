@@ -78,7 +78,7 @@ const Profile = () => {
     const { name, description } = query.site.siteMetadata
 
     return (
-        <ProfileLink fade duration={0.8} to="/">
+        <ProfileLink fade duration={0.8} to="/" title="Home">
             <ProfileWrapper>
                 <ProfileName>{name}<Caret>_</Caret></ProfileName>
             </ProfileWrapper>
