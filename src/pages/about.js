@@ -18,7 +18,7 @@ const AboutPage = () => (
             <p>
                 Comecei meus estudos em programação no primeiro dia do ano de 2018
                 e já em abril consegui meu primeiro trabalho como front-end onde fazia sites institucionais, e-commerces VTEX e Loja Integrada.
-                Tempos depois fui para Solintel/Tars onde iniciei meus trabalhos no back-end só que também atuando no front com Knockout.js e ASP.Net.
+                Tempos depois iniciei meus trabalhos no back-end só que também atuando no front com Knockout.js e ASP.Net.
                 Ajudei a desenvolver aplicações como <a href="https://si.solintel.com.br/" target="_blank" rel="noopener noreferrer"> ERP Solintel</a> e <a href="https://www.walledgarden.com.br" target="_blank" rel="noopener noreferrer">WalledGarden</a>,
                 tambem tomei a frente no projeto do sistema de gerenciamento de filas para as UPAs de Londrina.
                 Hoje trabalho com tótens de auto atendimento para provedores e restaurantes.
