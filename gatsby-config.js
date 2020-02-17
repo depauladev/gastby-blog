@@ -5,11 +5,11 @@ module.exports = {
   siteMetadata: {
     title: `DePaula Blog`,
     description: `I make cool things on internet :)`,
-    siteDescription: `Criando coisas na internet e dando dicas de Javascript, CSS, C#, .Net, Node.js, Soft skills`,
+    siteDescription: `Javascript, CSS, C#, .NET, Node.js, Soft skills`,
     author: `@depauladev`,
     position: "Developer",
     name: "De Paula",
-    siteUrl: 'https://depauladev.com.br'
+    siteUrl: 'https://www.depauladev.com.br'
   },
   plugins: [
     // needs to be the first to work with gatsby-remark-images

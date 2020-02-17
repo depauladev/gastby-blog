@@ -2,7 +2,7 @@ backend:
   name: gitlab
   repo: depauladev/blog
   branch: master
-  site_domain: https://depauladev.netlify.com/
+  site_domain: https://www.depauladev.com.br/
   auth_type: implicit
   app_id: 91b6ae8bd11fc6630b8d654318e86070d7cb9e7fa23778ab12b19d9de35c1e36
   
