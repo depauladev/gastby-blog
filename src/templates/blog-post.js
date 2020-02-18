@@ -7,21 +7,20 @@ import RecommendedPosts from "../components/RecommendedPosts"
 import ProgressBar from "../components/ProgressBar"
 import Scroller from "../components/Scroller"
 
-
 // Onde ficam os estilos dos posts
 import * as S from '../components/Post/styled'
 
 const BlogPost = ({ data, pageContext }) => {
-  const post = data.markdownRemark
-  const { title, date, description, author } = post.frontmatter
+  const { frontmatter, fields, html } = data.markdownRemark
+  const { title, date, description, author } = frontmatter
   const next = pageContext.nextPost
   const previous = pageContext.previousPost
 
   return (
     <Layout>
       <Scroller />
-      <ProgressBar scroll="70%"/>
-      <SEO title={title} description={description}/>
+      <ProgressBar/>
+      <SEO title={title} description={description} slug={fields.slug}/>
       <S.PostHeader>
         <S.PostDate>
           {date}
@@ -31,7 +30,7 @@ const BlogPost = ({ data, pageContext }) => {
         <S.PostDescription>{description}</S.PostDescription>
       </S.PostHeader>
       <S.MainContent>
-        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+        <div dangerouslySetInnerHTML={{ __html: html }}></div>
       </S.MainContent>
       <RecommendedPosts next={next} previous={previous} />
     </Layout>

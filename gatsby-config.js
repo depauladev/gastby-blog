@@ -39,6 +39,7 @@ module.exports = {
           },
           `gatsby-remark-lazy-load`,
           `gatsby-remark-prismjs`,
+          `gatsby-remark-social-cards`,
         ],
       },
     },
