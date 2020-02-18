@@ -30,7 +30,7 @@ function SEO({ description, lang, meta, title, image, slug }) {
   const metaDescription = description || site.siteMetadata.siteDescription
 
   const url = site.siteMetadata.siteUrl
-  const ogImage = `${url}/${image || 'ImagemTemporaria.jpg'}`
+  const ogImage = `${site.siteMetadata.siteUrl}${slug}twitter-card.jpg`
 
   return (
     <Helmet
@@ -66,7 +66,7 @@ function SEO({ description, lang, meta, title, image, slug }) {
         },
         {
           name: "twitter:image",
-          content: `${site.siteMetadata.siteUrl}${slug}twitter-card.jpg`
+          content: ogImage
         },
         {
           name: `twitter:image:src`,
