@@ -30,7 +30,7 @@ function SEO({ description, lang, meta, title, image, slug }) {
   const metaDescription = description || site.siteMetadata.siteDescription
 
   const url = site.siteMetadata.siteUrl
-  const ogImage = `${site.siteMetadata.siteUrl}${slug}twitter-card.jpg`
+  const ogImage = `${url}${slug}twitter-card.jpg`
 
   return (
     <Helmet
