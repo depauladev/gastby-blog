@@ -22,6 +22,7 @@ const Anchor = styled(AniLink)`
   text-decoration: none;
   transition: ease 0.3s;
   width: 50%;
+  flex: 1;
 
   ${media.lessThan("large")`
     padding: 1rem;

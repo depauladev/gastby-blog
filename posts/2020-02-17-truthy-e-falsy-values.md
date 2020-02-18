@@ -27,7 +27,7 @@ let g = 0n // BigInt
 
 ### Equalidade estrita
 
-Todos os valores *falsy* em comparação estrita `===` só serão iguais à eles mesmos.
+Todos os valores *falsy* em comparação estrita `===` só serão iguais a eles mesmos.
 
 ```javascript
 console.log(0 == false) // true
