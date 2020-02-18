@@ -1,7 +1,7 @@
 ---
 author: Luiz de Paula
-title: O que são Truthy e Falsy values
-description: Javascript possui um comportamento peculiar se tratando de condicionais
+title: Truthy e Falsy values no Javascript
+description: Um comportamento peculiar se tratando de condicionais.
 date: '2020-02-17 07:44:24'
 category: JS
 ---
