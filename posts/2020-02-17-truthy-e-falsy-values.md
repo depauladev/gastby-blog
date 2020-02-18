@@ -5,7 +5,7 @@ description: Um comportamento peculiar se tratando de condicionais.
 date: '2020-02-17 07:44:24'
 category: JS
 ---
-Javascript atribui um valor booleano automaticamente a todos os elementos da linguagem. Chamamos esses vaores de *truthy* ou *falsy* dependendo de como o interpretador os trata.
+Javascript atribui um valor booleano automaticamente a todos os elementos da linguagem. Chamamos esses valores de *truthy* ou *falsy* dependendo de como o interpretador os trata.
 
 ## Valores Falsy
 
@@ -72,7 +72,7 @@ const getDadosExternos = () => {
 }
 ```
 
-Desse modo evitamos de manipular um *undefined* como se fosse um array vazio.
+Desse modo evitamos de manipular um *undefined* como se fosse um array.
 
 Também facilita como escrevemos condicionais, evitando testar por todos os valores:
 
