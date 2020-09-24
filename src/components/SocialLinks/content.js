@@ -5,7 +5,7 @@ const links = [
     },
     {
         label: 'Github',
-        url: 'https://github.com/luizhpo'
+        url: 'https://github.com/depauladev'
     },
     {
         label: 'Codepen',
